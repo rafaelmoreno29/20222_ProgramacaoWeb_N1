@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="Exercicio1.html" method="post">
+        <fieldset>
+            <legend>Cadastro do Perfil</legend>
+            <div>
+                <label for="nome">Nome:</label>
+                <input placeholder="Digite seu nome..." type="text" id="nome" name="nome" required>
+            </div>
+            <div>
+                <label>Data de Nascimento:</label>
+                <input name="dtNasc" value="2022-08-17" type="date" max="2022-08-17" min="1901-01-01">
+            </div>
+            <div>
+                <label>Cor favorita:</label>
+                <input type="color" name="corFavorita">
+            </div>
+            <div>
+                <label>Sexo:</label>
+                <input checked value="F" name="sexo" id="fem" type="radio"><label for="fem">Feminino</label>
+                <input value="M" name="sexo" id="masc" type="radio"><label for="masc">Masculino</label>
+            </div>
+            <div>
+                <label>CEP:</label>
+                <input name="cep" pattern="[0-9]{5}-[0-9]{3}" title="Padrão do CEP: 99999-999">
+            </div>
+            <div>
+                <label>Senha</label>
+                <input type="password" name="senha">
+            </div>
+            <div>
+                <label>Esporte favorito:</label>
+                <input value="futebol" id="fut" name="esporte" type="checkbox"><label for="fut">Futebol</label>
+                <input value="basquete" id="basq" name="esporte" type="checkbox"><label for="basq">Basquete</label>
+                <input value="volei" id="vol" name="esporte" type="checkbox"><label for="vol">Vôlei</label>
+            </div>
+            <div>
+                <label>Foto</label>
+                <input type="file" name="foto">
+            </div>
+            <div>
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+            </div>
+            <div>
+                <label>Profissão</label>
+                <select name="profissao">
+                    <optgroup label="Analista de Sistemas"></optgroup>
+                    <option value="ASJ">Analista de sistemas - Júnior</option>
+                    <option value="ASP">Analista de sistemas - Pleno</option>
+                    <option value="ASS">Analista de sistemas - Sênior</option>
+                    <optgroup label="Programador"></optgroup>
+                    <option value="PRT" disabled>Técnico</option>
+                    <option value="PRJ">Programador - Júnior</option>
+                    <option value="PRP">Programador - Pleno</option>
+                    <option value="PRS">Programador - Sênior</option>
+                </select>
+            </div>
+        </fieldset> 
+    </form>
+</body>
+
+</html>
