@@ -6,23 +6,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        body {
+            background-color: aqua;
+        }
+
+        h2 {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        .cabecalho {
+            background-color: darkorange;
+            font-size: large;
+            position: sticky;
+            top: 10px;
+        }
+
+        #listaNaoOrdenada {
+            background-color: green;
+        }
+
+        p a {
+            background-color: aquamarine;
+        }
+
+        a:link {
+            color: green;
+        }
+
+        a:visited,
+        a:active {
+            color: red;
+        }
+
+        a:hover,
+        a:focus {
+            font-size: xx-large;
+        }
+
+        .zoom {
+            display: inline-block;
+            padding: 50px;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            transition: transform .9s;
+        }
+
+        .zoom:hover {
+            transform: scale(1.5);
+        }
+
+        .zoom2 {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transition: width 2s, height 4s;
+        }
+
+        .zoom2:hover {
+            width: 300px;
+            height: 300px;
+        }
+        .divExemplo{
+            border: solid red;  max-width: 70ex; 
+        }
+        h4{
+            float: left;
+            margin: 0px;
+        }
+
+    </style>
 </head>
 
-<body>
-    <a href="#ProgramacaoWeb">Programação Web</a><br/>
-    <a href="#RedeComputadores">Rede de Computadores</a><br/>
-    <a href="#ProtocoloTCPIP">Protocolo TCP/IP</a><br/>
-    <a href="#Camadas">Camadas</a><br/>
-    <a href="#Http">HTTP</a>
-    <p><a href="formulario.html" target="_blank">Formulário</a></p>
-    <hr/>
+<body style="background-color: darkgray">
+    <div class="zoom"></div>
+    <div class="zoom2"></div>
 
-    <h2>Exemplo - Lista de definição</h2>
+    <div class="divExemplo">
+        <div style="background-color: black; width: 50px;height: 50px;"></div>
+        <h4>HELLO!</h4>
+        This is some text. This is some text. This is some text.
+        This is some text. This is some text. This is some text.
+        This is some text. This is some text. This is some text.
+        This is some text. This is some text. This is some text.
+    </div>
+
+
+    <header class="cabecalho">
+        <a href="#ProgramacaoWeb">Programação Web</a><br />
+        <a href="#RedeComputadores">Rede de Computadores</a><br />
+        <a href="#ProtocoloTCPIP">Protocolo TCP/IP</a><br />
+        <a href="#Camadas">Camadas</a><br />
+        <a href="#Http">HTTP</a>
+        <p><a href="formulario.html" target="_blank">Formulário</a></p>
+    </header>
+    <hr />
+
+    <h2 style="color: green;">Exemplo - Lista de definição</h2>
     <dl>
         <dt>Título 1</dt>
         <dd>Descrição do título 1</dd>
         <dt>Título 2</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, error molestias? Voluptates eaque aut vel debitis possimus adipisci temporibus? Dignissimos itaque quas eveniet voluptatibus. Voluptatem laudantium aspernatur non est, ex neque repellendus! Magnam consectetur molestias ipsam autem debitis repellat velit quod, eveniet ut laudantium porro tenetur itaque, distinctio pariatur rerum?</dd>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, error molestias? Voluptates eaque aut vel
+            debitis possimus adipisci temporibus? Dignissimos itaque quas eveniet voluptatibus. Voluptatem laudantium
+            aspernatur non est, ex neque repellendus! Magnam consectetur molestias ipsam autem debitis repellat velit
+            quod, eveniet ut laudantium porro tenetur itaque, distinctio pariatur rerum?</dd>
     </dl>
 
     <h2>Exemplo - Lista ordenada</h2>
@@ -36,8 +141,8 @@
             </ol>
         </li>
     </ol>
-<!-- Comentário -->
-    <h2>Exemplo - Lista não ordenada</h2>
+    <!-- Comentário -->
+    <h2 id="listaNaoOrdenada">Exemplo - Lista não ordenada</h2>
     <ul style="list-style-type:square">
         <li>Item 1</li>
         <li>Item 2</li>
@@ -49,7 +154,9 @@
     </ul>
 
     <h1 id="ProgramacaoWeb">Programação Web</h1>
-    <p><b>Lorem ipsum dolor sit amet,</b> consectetur adipiscing elit. Praesent bibendum est a nibh fringilla condimentum.
+    <p style="border: 1px solid;padding:30px;margin:60px;"><b>Lorem ipsum dolor sit amet,</b> consectetur adipiscing
+        elit. Praesent bibendum est a nibh fringilla
+        condimentum.
         Donec consequat mi diam, eu venenatis diam dictum quis. Maecenas a libero a eros tristique pulvinar eu accumsan
         nisi. Nam elit lacus, vestibulum nec dignissim vitae, scelerisque et justo. Integer vitae commodo est. Cras orci
         mauris, maximus fermentum felis a, varius rhoncus odio. Integer sed faucibus leo, et dictum felis. Suspendisse
@@ -77,8 +184,8 @@
         Mauris tristique tellus a nisi gravida hendrerit quis vel risus. Quisque lectus elit, volutpat sed neque sit
         amet, iaculis gravida libero. Aenean maximus sed nisl ut faucibus. Praesent sollicitudin consequat metus ut
         aliquet. Vestibulum laoreet porttitor risus.</p>
-        <a href="Exercicio1.html" target="_blank">Clique aqui e faça o Exercício 1</a>
-        <a href="Exercicio1.html#Titulo2" target="_blank">Titulo 2</a>
+    <a href="Exercicio1.html" target="_blank">Clique aqui e faça o Exercício 1</a>
+    <a href="Exercicio1.html#Titulo2" target="_blank">Titulo 2</a>
 
     <h2 id="RedeComputadores">Rede de computadores</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum est a nibh fringilla condimentum.
@@ -86,10 +193,10 @@
         nisi. Nam elit lacus, vestibulum nec dignissim vitae, scelerisque et justo. Integer vitae commodo est. Cras orci
         mauris, maximus fermentum felis a, varius rhoncus odio. Integer sed faucibus leo, et dictum felis. Suspendisse
         scelerisque eleifend nulla ac lobortis. Phasellus id odio sed turpis auctor tempus.</p>
-    
-        <img src="img/logo.jpg" alt="imagem do logotipo"/>
-    
-        <p>Donec vulputate sed mi vitae auctor. Aenean sed cursus ipsum. Donec vitae ultrices eros, eu fermentum eros. Duis
+
+    <img src="img/logo.jpg" alt="imagem do logotipo" />
+
+    <p>Donec vulputate sed mi vitae auctor. Aenean sed cursus ipsum. Donec vitae ultrices eros, eu fermentum eros. Duis
         cursus enim lacus, quis faucibus ex commodo nec. Nam hendrerit, metus sed condimentum pharetra, nisl ex
         ullamcorper dui, vel convallis purus enim et diam. Orci varius natoque penatibus et magnis dis parturient
         montes, nascetur ridiculus mus. Proin interdum malesuada fringilla. Proin fringilla, tortor ac feugiat interdum,
@@ -99,7 +206,7 @@
         amet, iaculis gravida libero. Aenean maximus sed nisl ut faucibus. Praesent sollicitudin consequat metus ut
         aliquet. Vestibulum laoreet porttitor risus.
     </p>
-    <table width="100%" border="1" cellpadding="10" cellspacing="0">
+    <table>
         <thead>
             <tr>
                 <th>Coluna 1</th>
