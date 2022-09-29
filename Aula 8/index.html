@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Aula 8</title>
+  </head>
+  <body class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+    <button class="btn btn-primary">
+      <i class="fab fa-accessible-icon me-1"></i>Hello, world!
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var carros = ['Escort','Fusca','Opala'];
+        console.log('Excluindo o último elemento: ' + carros.pop());
+        console.log('Retorno do push: ' + carros.push('Celta'));
+        console.log('Carros: ' + carros.join(', '));
+        console.log(carros.reverse());
+        console.log('Excluindo o primeiro elemento: ' + carros.shift());
+        console.log('Carros: ' + carros.join(', '));
+        console.log('Inserir no início: ' + carros.unshift('Ferrari'));
+        console.log('Carros: ' + carros.join(', '));
+        console.log(carros[2]);
+        console.log(carros.indexOf('Fusca'));
+        console.log('Verifica se Ferrari existe: '+
+                                    carros.includes('Ferrari'));
+        
+        console.log('Carros que iniciam com F: ' +
+                                carros.filter(n=>n.startsWith('F')));
+                                
+        console.log('Primeiro carro que inicia com F: ' +
+                                carros.find(n=>n.startsWith('F')));
+    </script>
+  </body>
+
+</html>
