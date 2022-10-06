@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+
+    <title>Exemplo Objeto - Java Script</title>
+</head>
+
+<body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var carro = {
+            marca: "Ford",
+            modelo: "K",
+            ano: "2015"
+        };
+        console.log(carro);
+        console.log(carro.marca);
+        console.log(carro['modelo']);
+        console.log(carro.cor);
+        carro.cor = 'Preto';
+        console.log(carro.cor);
+
+       
+
+     /*   function Carro(marca,modelo,ano){
+            this.marca = marca;
+            this.modelo = modelo;
+            this.ano = ano;
+        }*/
+
+        class Carro{
+            constructor(marca,modelo,ano){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.ano = ano;
+            }
+        }
+
+        var meuCarro1 = new Carro('Chevrolet','Corsa','2013');
+        console.log(meuCarro1);
+
+
+  
+    </script>
+</body>
+
+</html>
