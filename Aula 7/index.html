@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Aula 7</title>
+  </head>
+  <body> 
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <label class="form-label">Qtde Linhas</label>
+                <input class="form-control" id="qtdeLinhas" type="number">
+                <button onclick="atualizarTabela()" 
+                        class="btn btn-success">Atualizar Tabela</button>
+            </div>
+            <div class="col-md-12">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Sobrenome</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody">
+                    
+                  </tbody>
+                </table>               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input class="form-control" id="txt1">
+            </div>
+            <div class="col-md-9">
+                <button onmouseover="mostrarAlerta()" onclick="mostrarAlerta()" class="btn btn-primary">Mostrar Alerta</button>
+                <button onclick="print()" class="btn btn-danger">Imprimir</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <input type="number" class="form-control" id="num1">
+            </div>
+            <div class="col-md-3">
+                <input type="number" class="form-control" id="num2">
+            </div>
+            <div class="col-md-3">
+                <button onclick="somar()" class="btn btn-primary">Somar</button>
+            </div>
+            <div class="col-md-3">
+                <input type="number" class="form-control" id="resultado">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label class="form-label">Informe a cor</label>
+                <input type="color" id="cor" class="form-control">
+                <button onclick="mudarCor()" class="btn btn-dark">Processar</button>
+            </div>
+            <div class="col-md-12">
+                <p id="paragrafo1">Texto Inicial!!!</p>
+            </div>
+        </div>
+    </div>    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function atualizarTabela(){
+            var qtdeLinhas = document.getElementById('qtdeLinhas');
+            var tbody = document.getElementById('tbody');
+            tbody.innerHTML = '';
+            for (let index = 0; index < qtdeLinhas.value; index++) {
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                var td2 = document.createElement('td');
+                td1.innerHTML = 'Nome ' + index;
+                td2.innerHTML = 'Sobrenome ' + index;
+                
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tbody.appendChild(tr);
+            }
+        }
+        
+        function mostrarAlerta(){
+            var txt1 = document.getElementById('txt1');
+            if(txt1.value != '')
+                alert(txt1.value);
+            else
+                alert("Input vazio!!!");                
+        }
+        function somar(){
+            var num1 = document.getElementById('num1');
+            var num2 = document.getElementById('num2');
+            var soma = parseFloat(num1.value) + parseFloat(num2.value);
+            //alert(soma);
+            document.getElementById('resultado').value = soma;
+        }
+        function mudarCor(){
+            console.log("Iniciou o método mudar cor");
+            var cor = document.getElementById('cor');
+            var paragrafo = document.getElementById('paragrafo1');
+            console.log(paragrafo);
+            paragrafo.innerHTML= "A cor selecionada foi: " + cor.value;
+            paragrafo.style.color = cor.value;
+            console.log("Finalizou o método mudar cor");
+        }
+    </script>  
+</body>
+</html>
