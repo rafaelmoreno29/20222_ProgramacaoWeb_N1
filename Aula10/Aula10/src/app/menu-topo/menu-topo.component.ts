@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-topo.component.css']
 })
 export class MenuTopoComponent implements OnInit {
-  estaAutenticado : boolean = true;
-  menus : any = ["Menu 1", "Menu 2", "Menu 3"];
+  estaAutenticado: boolean = true;
+  menus: any = [
+    { rota: 'calculadora', titulo: 'Calculadora' },    
+    { rota: 'calcular-media', titulo: 'Calcular Média' },
+    { rota: 'pai', titulo: 'Rota Aninhada' }
+  ];
   constructor() { }
 
   ngOnInit(): void {
