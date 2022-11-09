@@ -6,9 +6,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { Filho1Component } from './pai/filho1/filho1.component';
 import { Filho2Component } from './pai/filho2/filho2.component';
 import { PaiComponent } from './pai/pai.component';
+import { UsuarioComponent } from './usuario/usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/calculadora', pathMatch: 'full' },
+  { path: 'usuario', component: UsuarioComponent },
   { path: 'calculadora', component: CalculadoraComponent },
   { path: 'calculadora2/:num1/:num2', component: CalculadoraComponent },
   { path: 'calcular-media', component: CalcularMediaComponent },

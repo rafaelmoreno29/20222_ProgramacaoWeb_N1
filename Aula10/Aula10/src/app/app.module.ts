@@ -13,6 +13,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PaiComponent } from './pai/pai.component';
 import { Filho1Component } from './pai/filho1/filho1.component';
 import { Filho2Component } from './pai/filho2/filho2.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { NgxLoadingModule } from 'ngx-loading';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +28,18 @@ import { Filho2Component } from './pai/filho2/filho2.component';
     PageNotFoundComponent,
     PaiComponent,
     Filho1Component,
-    Filho2Component
+    Filho2Component,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AlunoModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgxLoadingModule.forRoot({}),
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]
